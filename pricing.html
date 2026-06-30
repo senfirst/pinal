@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs — Pinal Design</title>
+<meta name="description" content="Découvrez les packs Starter, Business et Premium de Pinal Design, agence créative au Sénégal.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:stretch; }
+.price-card{ display:flex; flex-direction:column; }
+.price-card.featured{ border-color: var(--orange); position:relative; transform: scale(1.03); }
+.price-card.featured::before{ content:"Le plus populaire"; position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--grad-main); padding:6px 18px; border-radius:50px; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; white-space:nowrap; }
+.price-card .amount{ font-family:var(--font-display); font-size:2.6rem; margin:18px 0 6px; }
+.price-card .amount span{ font-size:1rem; color:var(--muted); font-family:var(--font-body); }
+.price-card ul{ margin:26px 0; flex:1; }
+.price-card ul li{ padding:10px 0; border-top:1px solid var(--line); font-size:0.92rem; color:var(--muted); display:flex; gap:10px; }
+.price-card ul li::before{ content:"✓"; color:var(--orange); font-weight:700; }
+.faq-item{ border-bottom:1px solid var(--line); padding:22px 0; cursor:pointer; }
+.faq-q{ display:flex; justify-content:space-between; align-items:center; font-weight:700; font-size:1.02rem; }
+.faq-q::after{ content:"+"; font-size:1.4rem; color:var(--orange); transition: transform .3s; }
+.faq-item.open .faq-q::after{ transform: rotate(45deg); }
+.faq-a{ max-height:0; overflow:hidden; transition: max-height .35s ease, padding .35s ease; color:var(--muted); font-size:0.94rem; }
+.faq-item.open .faq-a{ max-height:200px; padding-top:14px; }
+@media (max-width:980px){ .pricing-grid{ grid-template-columns:1fr; } .price-card.featured{ transform:scale(1); } }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="mark">P</span><span>Pinal<span class="sub">DESIGN</span></span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html" class="active">Tarifs</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-outline">Demander un devis</a>
+      <a href="https://wa.me/221788626180" class="btn btn-primary">WhatsApp</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="close-btn">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="about.html">À propos</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="pricing.html">Tarifs</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-header">
+  <div class="blob" style="width:480px;height:480px;background:var(--violet);top:-160px;left:-160px;"></div>
+  <div class="container">
+    <div class="breadcrumb reveal in">Accueil <span>/</span> Tarifs</div>
+    <h1 class="reveal in">Des offres <span style="background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;">adaptées</span> à chaque ambition</h1>
+    <p class="lead reveal in" style="margin-top:14px;">Choisissez le pack qui correspond à votre projet, ou demandez un devis sur-mesure.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="pricing-grid">
+      <div class="card price-card reveal">
+        <div class="eyebrow">Pack Starter</div>
+        <h3 style="font-size:1.4rem;">Pour petites entreprises</h3>
+        <div class="amount">75 000 <span>FCFA</span></div>
+        <ul>
+          <li>1 logo professionnel (2 propositions)</li>
+          <li>Carte de visite</li>
+          <li>1 affiche ou flyer</li>
+          <li>2 révisions incluses</li>
+          <li>Livraison sous 5 jours</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline btn-block">Choisir ce pack</a>
+      </div>
+
+      <div class="card price-card featured reveal">
+        <div class="eyebrow">Pack Business</div>
+        <h3 style="font-size:1.4rem;">Pour PME</h3>
+        <div class="amount">250 000 <span>FCFA</span></div>
+        <ul>
+          <li>Identité visuelle complète</li>
+          <li>Site vitrine (jusqu'à 5 pages)</li>
+          <li>Supports imprimés (factures, étiquettes)</li>
+          <li>Templates réseaux sociaux</li>
+          <li>4 révisions incluses</li>
+          <li>Livraison sous 12 jours</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-block">Choisir ce pack</a>
+      </div>
+
+      <div class="card price-card reveal">
+        <div class="eyebrow">Pack Premium</div>
+        <h3 style="font-size:1.4rem;">Pour grandes entreprises</h3>
+        <div class="amount">Sur devis</div>
+        <ul>
+          <li>Branding complet & charte graphique</li>
+          <li>Site web sur-mesure</li>
+          <li>Tous supports imprimés</li>
+          <li>Stratégie réseaux sociaux</li>
+          <li>Accompagnement continu</li>
+          <li>Révisions illimitées</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline btn-block">Demander un devis</a>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:46px;" class="reveal">
+      <a href="contact.html" class="btn btn-primary">Demander un devis personnalisé</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div style="max-width:760px; margin:0 auto;" class="reveal">
+      <div class="faq-item open">
+        <div class="faq-q">Quels sont les délais de livraison ?</div>
+        <div class="faq-a">Les délais varient selon le pack choisi : de 48h pour un logo simple à 2-3 semaines pour un projet de branding complet.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Combien de révisions sont incluses ?</div>
+        <div class="faq-a">Chaque pack inclut un nombre de révisions défini. Des révisions supplémentaires peuvent être ajoutées sur demande.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Proposez-vous des paiements échelonnés ?</div>
+        <div class="faq-a">Oui, pour les packs Business et Premium, un paiement en deux ou trois fois est possible.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le nom de domaine et l'hébergement sont-ils inclus ?</div>
+        <div class="faq-a">Non, mais nous vous accompagnons dans leur acquisition et leur configuration au meilleur prix.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Une question sur nos offres ?</h2>
+      <p>Contactez-nous directement, nous répondons en moins de 24h.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="https://wa.me/221788626180" class="btn btn-primary">Discuter sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="mark">P</span><span>Pinal<span class="sub">DESIGN</span></span></a>
+        <p>Agence créative et de conception graphique. Nous créons tout type de supports pour votre marque ou entreprise.</p>
+        <div class="social-row"><a href="#">IG</a><a href="#">FB</a><a href="#">TT</a></div>
+      </div>
+      <div><h5>Navigation</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Tarifs</a></li></ul></div>
+      <div><h5>Services</h5><ul><li><a href="services.html">Sites Web</a></li><li><a href="services.html">Logos & Branding</a></li><li><a href="services.html">Affiches & Flyers</a></li><li><a href="services.html">Impression</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li>📞 +221 78 862 61 80</li><li>📍 Dakar, Sénégal</li><li>💬 @pinal.design</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pinal Design. Tous droits réservés.</span>
+      <span>Conçu avec ❤️ par Pinal Design</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/221788626180" class="wa-float" aria-label="WhatsApp">💬</a>
+<script src="script.js"></script>
+</body>
+</html>
