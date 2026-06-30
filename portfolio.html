@@ -6,6 +6,37 @@
 <title>Portfolio — Pinal Design</title>
 <meta name="description" content="Découvrez les réalisations de Pinal Design : logos, sites web, affiches, branding et supports imprimés.">
 <link rel="stylesheet" href="styles.css">
+  <style>
+    .work-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.work-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.work-item:hover .work-overlay{
+    opacity: 1;
+}
+  </style>
 </head>
 <body>
 
@@ -60,55 +91,108 @@
       <button class="tag-pill" data-filter="print">Supports imprimés</button>
     </div>
 
-    <div class="work-grid" id="work-gallery">
+ <div class="work-grid" id="work-gallery">
 
-      <div class="work-item reveal" data-cat="web" style="background:linear-gradient(160deg,#4B0082,#7c1fd1);">
-        <div class="ph">CS</div>
-        <div class="work-overlay"><span>Site Web</span><h4>CreativeStudio</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Studio Digital — Refonte complète d'un site vitrine.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="logos" style="background:linear-gradient(160deg,#FF2D95,#4B0082);">
-        <div class="ph">P</div>
-        <div class="work-overlay"><span>Logo</span><h4>Pinal Design</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Interne — Identité de marque de l'agence.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="affiches" style="background:linear-gradient(160deg,#FFA500,#FF2D95);">
-        <div class="ph">50%</div>
-        <div class="work-overlay"><span>Affiche</span><h4>Campagne Golaf Promo</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Golaf — Affiche promotionnelle -50%.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="branding" style="background:linear-gradient(160deg,#4B0082,#FFA500);">
-        <div class="ph">M</div>
-        <div class="work-overlay"><span>Branding</span><h4>Meravu Erire Studie</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Meravu — Carte de visite & identité.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="print" style="background:linear-gradient(160deg,#FF2D95,#FFA500);">
-        <div class="ph">S</div>
-        <div class="work-overlay"><span>Étiquette</span><h4>Sertios Cosmétiques</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Sertios — Étiquette produit.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="print" style="background:linear-gradient(160deg,#7c1fd1,#FF2D95);">
-        <div class="ph">F</div>
-        <div class="work-overlay"><span>Cachet & Facture</span><h4>Atelier Diagne</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Atelier Diagne — Cachet et modèle de facture.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="web" style="background:linear-gradient(160deg,#4B0082,#FF2D95);">
-        <div class="ph">E</div>
-        <div class="work-overlay"><span>Site Web</span><h4>E-commerce Téranga</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Téranga Shop — Boutique en ligne.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="logos" style="background:linear-gradient(160deg,#FFA500,#4B0082);">
-        <div class="ph">J</div>
-        <div class="work-overlay"><span>Logo</span><h4>ONG Jamm</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : ONG Jamm — Logo associatif.</p></div>
-      </div>
-
-      <div class="work-item reveal" data-cat="print" style="background:linear-gradient(160deg,#FF2D95,#7c1fd1);">
-        <div class="ph">★</div>
-        <div class="work-overlay"><span>Autocollants</span><h4>Pack Stickers Toner</h4><p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">Client : Toner Plus — Série d'autocollants produits.</p></div>
-      </div>
-
+  <div class="work-item reveal" data-cat="web">
+    <img src="images/creativestudio.jpg" alt="CreativeStudio" class="work-image">
+    <div class="work-overlay">
+      <span>Site Web</span>
+      <h4>CreativeStudio</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Studio Digital — Refonte complète d'un site vitrine.
+      </p>
     </div>
   </div>
+
+  <div class="work-item reveal" data-cat="logos">
+    <img src="images/pinal-design.jpg" alt="Pinal Design" class="work-image">
+    <div class="work-overlay">
+      <span>Logo</span>
+      <h4>Pinal Design</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Interne — Identité de marque de l'agence.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="affiches">
+    <img src="images/golaf-promo.jpg" alt="Golaf Promo" class="work-image">
+    <div class="work-overlay">
+      <span>Affiche</span>
+      <h4>Campagne Golaf Promo</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Golaf — Affiche promotionnelle -50%.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="branding">
+    <img src="images/meravu-branding.jpg" alt="Meravu Erire Studie" class="work-image">
+    <div class="work-overlay">
+      <span>Branding</span>
+      <h4>Meravu Erire Studie</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Meravu — Carte de visite & identité.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="print">
+    <img src="images/sertios.jpg" alt="Sertios Cosmétiques" class="work-image">
+    <div class="work-overlay">
+      <span>Étiquette</span>
+      <h4>Sertios Cosmétiques</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Sertios — Étiquette produit.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="print">
+    <img src="images/atelier-diagne.jpg" alt="Atelier Diagne" class="work-image">
+    <div class="work-overlay">
+      <span>Cachet & Facture</span>
+      <h4>Atelier Diagne</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Atelier Diagne — Cachet et modèle de facture.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="web">
+    <img src="images/teranga-shop.jpg" alt="E-commerce Téranga" class="work-image">
+    <div class="work-overlay">
+      <span>Site Web</span>
+      <h4>E-commerce Téranga</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Téranga Shop — Boutique en ligne.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="logos">
+    <img src="images/ong-jamm.jpg" alt="ONG Jamm" class="work-image">
+    <div class="work-overlay">
+      <span>Logo</span>
+      <h4>ONG Jamm</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : ONG Jamm — Logo associatif.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-item reveal" data-cat="print">
+    <img src="images/stickers-toner.jpg" alt="Pack Stickers Toner" class="work-image">
+    <div class="work-overlay">
+      <span>Autocollants</span>
+      <h4>Pack Stickers Toner</h4>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:6px;">
+        Client : Toner Plus — Série d'autocollants produits.
+      </p>
+    </div>
+  </div>
+
+</div>
 </section>
 
 <section>
